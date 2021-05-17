@@ -1,0 +1,176 @@
+*{
+    box-sizing: border-box;
+    /* this is used so that whenever we add a border it will adjust itself in the existing area */
+}
+body{
+    margin: 0px;
+    font-family: "Raleway", sans-serif;
+    background-color: #ecf0f1;
+}
+.toolbar{
+    background-color: #2d3436;
+    height: 12vh;
+    display: flex;
+    /* with using this where the + and x were taking full size their boxes will become the sixe as that of the element size */
+    align-items: center; 
+    /* this makes item center from top and bottom */
+    padding-left: 5rem; 
+}
+
+.filter-container{
+    height: 60%;
+    /* border: 1px solid red; */
+    width: 14rem;
+    margin-right: 4rem;
+    border-radius:0.2rem;
+    background-color: #6d7c7e;
+    display: flex;
+}
+
+.filter{
+    height: 100%;
+    /* border: 1px solid red; */
+    width: 25%;
+    /* use to perfectly center the filter_color element */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.filter_color{
+    height: 40%;
+    width: 40%;
+    /* border: 1px solid blue; */
+    border-radius: 0.1rem;
+}
+.pink{
+    background-color: tomato;
+}
+.blue{
+    background-color: lightblue;
+}
+.green{
+    background-color: lightgreen;
+}
+.black{
+    background-color: black;
+}
+
+.action-container{
+    height: 60%;
+    /* border: 1px solid red; */
+    width: 8rem;
+    background-color: #6d7c7e;
+    border-radius: 0.2rem solid;
+    display: flex;
+    border-radius: 0.2rem solid;
+}
+
+.icon-container{
+    /* height:100%; */
+    width:50%;
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+/* icons->text */
+.fas{
+    font-size: 1.5rem;
+}
+.active{
+    background-color:rgb(102, 99, 99);
+}
+/*!--------------------------maodal container */
+.main-container{
+    height: 85vh;
+    position: relative;
+    overflow: auto;
+}
+.modal_container{
+    background-color:green;
+    height:18rem;
+    width:36rem;
+    position:absolute;
+    /* absolute is given so that the new cards that we're going to add with every 
+    entered task can be added in the bg and this will come on the new layer*/
+    display: flex;
+    border: 1px solid red;
+    top:30vh;
+    left:calc((100vw - 36rem)/2);
+    /* by using calc function it will remain center of the screen because 100vw will mean full screen at viewport - the width of modal container */
+    box-shadow: 0 1rem 3rem rgba(0,0,0,0.698);
+
+}
+.input_container{
+    /* for input first we used input functionality but the text was comeing at the center
+    hence we later used textArea */
+   height:100%;
+   width:73%;
+}
+.modal_input{
+    height:100%;
+    width:100%;
+    outline:none;
+    padding: 2rem 3rem;
+    font-family: "Raleway",sans-serif;
+    font-size: 1.5rem;
+    /* space between lines can be removed*/
+    line-height: 145%;
+    font-weight: 400;
+
+}
+.modal_filter_container{
+    background-color: #444;
+    width: 27%;
+    /* 1- did flex so that the color boxes come one after another
+     2- space evenly is used to make them at center
+     3- padding to make them shrink a little bit
+     4-*/
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    /* gap:2rem */
+    align-items: center;
+    padding: 1.7rem 1.2rem;
+}
+.modal_filter_container>.filter{
+    height:15%;
+    width:60%;
+}
+.border{
+    border:0.2rem solid white;
+}
+/* task css */
+.main-container{
+    height:88vh;
+    padding-top: 2rem;
+    padding-left: 3rem;
+    display: flex;
+    justify-content: space-evenly;
+   flex-wrap: wrap;
+}
+.task_filter{
+    height: 7%;
+}
+.task_container{
+    height: 10rem;
+    width:16rem;
+    background-color: #fff;
+    
+}
+.task_desc_container{
+    padding-left:0.5rem;
+    height:80%;
+  
+}
+.task_desc{
+    text-align: center;
+    height:70%;
+    overflow-y: auto;
+    /* to break the words when space isn't given */
+    word-break: break-all;
+}
+.uid{
+    color: #444;
+    margin-bottom: 0.1rem;
+}
